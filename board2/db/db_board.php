@@ -20,11 +20,11 @@ function ins_board(&$param) {
 
 function sel_board_list() {
     $sql=
-    "   SELECT B.i_board, B.title, B.created_at
+    "   SELECT B.i_board, B.title, B.created_at, B.hit
              , U.nm
           FROM t_board B
          INNER JOIN t_user U
-            ON B.i_board = U.i_user
+            ON B.i_user = U.i_user
          ORDER BY B.i_board DESC
     ";
     $conn= get_conn();
