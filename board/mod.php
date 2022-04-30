@@ -1,10 +1,10 @@
 <?php
     include_once "db.php";
-
+    
     $i_board= $_GET["i_board"];
 
     $conn= get_conn();
-    $sql= "SELECT * FROM t_board WHERE i_board=$i_board";
+    $sql= "SELECT i_board, title, ctnt FROM t_board WHERE i_board=$i_board";
     $result= mysqli_query($conn, $sql);
     mysqli_close($conn);
 
@@ -12,7 +12,6 @@
     {
         $title= $row["title"];
         $ctnt= $row["ctnt"];
-        $mod_at= $row["mod_at"];
     }
 ?>
 <!DOCTYPE html>
@@ -30,11 +29,10 @@
         <div><input type="hidden" name="i_board" value="<?=$i_board?>"></div>
         <div><input type="text" name="title" placeholder="제목" value="<?=$title?>"></div>
         <div><textarea name="ctnt" placeholder="내용"><?=$ctnt?></textarea></div>
-        <div><input type="time" name="mod_at" value="<?=$mod_at?>"></div>
         <div>
             <input type="submit" value="글수정">
             <input type="reset" value="초기화">
         </div>
-    </form>
+    </form>    
 </body>
 </html>

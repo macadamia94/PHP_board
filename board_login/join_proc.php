@@ -7,15 +7,15 @@
     $nm = $_POST["nm"];
     $gender = $_POST["gender"];
 
-    $param = [
+    $param= [
         "uid" => $uid,
         "upw" => $upw,
         "nm" => $nm,
         "gender" => $gender,
     ];
-    
-    $result = ins_user($param);
-    
+
+    $result= ins_join($param);  
+
     echo "result : ", $result, "<br>";
     echo "uid : ", $uid, "<br>";
     echo "upw : ", $upw, "<br>";

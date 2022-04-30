@@ -11,9 +11,8 @@
     if($row= mysqli_fetch_assoc($result))
     {
         $title= $row["title"];
-        $ctnt= $row["ctnt"];
         $create_at= $row["create_at"];
-        $mod_at= $row["mod_at"];
+        $ctnt= $row["ctnt"];
     }
 ?>
 <!DOCTYPE html>
@@ -28,9 +27,8 @@
     <a href="list.php"><button>리스트</button></a>
     <a href="del_proc.php?i_board=<?=$i_board?>"><button>삭제</button></a>
     <a href="mod.php?i_board=<?=$i_board?>"><button>수정</button></a>
-    <div>제목 : <?=$title?></div>
+    <div>제목: <?=$title?></div>
+    <div>작성일시 : <?=$create_at?></div>
     <div>내용 : <?=$ctnt?></div>
-    <div>작성시간 : <?=$create_at?></div>
-    <div>수정시간 : <?=$mod_at?></div>
 </body>
 </html>

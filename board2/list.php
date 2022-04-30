@@ -1,8 +1,12 @@
 <?php
     include_once "db/db_board.php";
-
-
-
+    session_start();
+    $nm= "";
+    if(isset($_SESSION["login_user"])) {
+        $login_user= $_SESSION["login_user"];
+        $nm= $login_user["nm"];
+    }
+    $list= sel_board_list();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +17,18 @@
     <title>리스트</title>
 </head>
 <body>
-    <div>
+    <div id="container">
         <header>
+        <?=isset($_SESSION["login_user"]) ? "<div>" . $nm . "님 환영합니다.</div>" : "" ?>
+        <div>
             <a href="list.php">리스트</a>
-            <a href="write.php">글쓰기</a>
-
+            <?php if(isset($_SESSION["login_user"])) { ?>
+                <a href="write.php">글쓰기</a>
+                <a href="logout.php">로그아웃</a>
+            <?php } else { ?>
+                <a href="login.php">로그인</a>
+            <?php } ?>        
+        </div>
         </header>
     </div>
 </body>

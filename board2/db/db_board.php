@@ -17,3 +17,18 @@ function ins_board(&$param) {
     mysqli_close($conn);
     return $result;
 }
+
+function sel_board_list() {
+    $sql=
+    "   SELECT B.i_board, B.title, B.created_at
+             , U.nm
+          FROM t_board B
+         INNER JOIN t_user U
+            ON B.i_board = U.i_user
+         ORDER BY B.i_board DESC
+    ";
+    $conn= get_conn();
+    $result= mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    return $result;
+}

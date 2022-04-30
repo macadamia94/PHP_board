@@ -7,22 +7,22 @@
     $date= date('Y-m-d H:i:s');
 
     $connect= get_connect();
-    $query = 
-    "INSERT INTO board 
-    (number, title, ctnt, date, hit, id) 
-    values
-    (null,'$title', '$ctnt', '$date', 0, '$id')
+    $query= "
+    INSERT INTO board 
+    (id, title, ctnt, date, hit)
+    VALUES
+    ('$id', '$title', '$ctnt', '$date', '0')
     ";
-
     $result= mysqli_query($connect, $query);
-    mysqli_close($connect);
 
     if($result)
     {
-        header("Location: index.php");
+        header("Locaion: index.php");
     }
     else
     {
         print "게시글 등록에 실패하였습니다.";
     }
+
+    mysqli_close($connect);
 ?>

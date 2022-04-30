@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>글쓰기</h1>
-    <form action="write_proc.php" method="post">        
+    <form action="write_proc.php" method="post">
         <div><input type="text" name="title" placeholder="제목"></div>
         <div><textarea name="ctnt" placeholder="내용"></textarea></div>
         <div>
