@@ -1,0 +1,33 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    display: grid; 
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.top {
+    text-align: center;
+    color: blueviolet;
+    
+}
+
+.no {
+    float: right;
+    font-size: 15px;
+    font-weight: bolder;
+    color: blueviolet;
+    height: 30px;
+    width: 65px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid blueviolet;
+    border-radius: 11px;
+    margin-right: 10px;
+}
+
+.no:hover 
+{
+    cursor: pointer;
+}
