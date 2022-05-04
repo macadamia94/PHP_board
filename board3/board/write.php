@@ -9,7 +9,7 @@ if(isset($_SESSION["login_user"])) {
 } else { ?>
     <script>
         alert('비회원입니다!');
-        location.href= "main.php";
+        location.href= "login.php";
     </script>
 <?php } ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ if(isset($_SESSION["login_user"])) {
 <body>
     <form action="write_proc.php" method="post" autocomplete="off">
         <div><input type="text" size="25" name="title" placeholder="제목" require></div>
-        <hr width="250px" align="left">
+        <hr width="250px" text-align="left">
         <div><textarea name="ctnt" cols="35" rows="15" placeholder="내용을 입력하세요."></textarea></div>
         <div><input type="submit" value="글쓰기"></div>
     </form>

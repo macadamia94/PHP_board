@@ -1,0 +1,19 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    margin: 30px;
+    display: grid; 
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset legend { text-align: center; }
+
+form {  
+    margin: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+form div { padding: 2px; }
