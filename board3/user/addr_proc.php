@@ -20,11 +20,13 @@
 </head>
 <body>
     <table>
-        <?php foreach($result as $item) { 
-            $full= $item["sico"]. ' ' .$item["sigungu"]. ' ' .$item["doro"]. ' ' .$item["build_no1"]. ' ' .$item["build_nm"]; ?>
+        <?php while($row= mysqli_fetch_array($result)) { 
+        $full= $row['SIDO']. $row['SIGUNGU']. $row['DORO']. $row['BUILD_NO1']. $row['BUILD_NM']; ?>
+        <tr>
             <td><?=$num?></td>
-            <td><a href="addr_detail.php?full=<?=$full?>"></a></td>
-        <?php $num++; } ?>   
+            <td><a href="addr_detail.php?full=<?=$full?>"><?=$full?></a></td>            
+        </tr>
+        <?php $num++; } ?>
     </table>
 </body>
 </html>

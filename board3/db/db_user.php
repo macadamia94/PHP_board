@@ -44,7 +44,7 @@ function sel_addr(&$param) {
     $addr= $param["addr"];
     $arr= explode(" ", $addr);
 
-    if($arr[1]) {
+    if(isset($arr[1])) {
         $sql=
         "   SELECT * 
             FROM zipcode 
@@ -59,9 +59,9 @@ function sel_addr(&$param) {
              ORDER BY build_no1 ASC  
         ";
     }
-    echo "$sql";
+    // echo "$sql";
     $conn= get_conn();
     $result= mysqli_query($conn, $sql);
     mysqli_close($conn);
-    return mysqli_fetch_array($result);
+    return $result;
 }

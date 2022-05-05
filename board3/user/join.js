@@ -30,10 +30,3 @@ function address() {
     url= "addr.php";
     window.open(url, "addr", "width=500,height=400, scrollbars=no, resizable=no");
 }
-
-function my_addr() {
-    var full= `${full}`;
-    var my_addr= full+" "+document.getElementById("addr_detail").value;
-    opener.document.getElementById("addr").value= my_addr;
-    window.close();
-}
