@@ -7,7 +7,20 @@ body {
     align-items: center;
 }
 
-fieldset legend { text-align: center; }
+header a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+fieldset {
+    border-radius: 8px;
+    border-color: blueviolet;
+}
+
+fieldset legend { 
+    text-align: center; 
+    color: blueviolet;
+}
 
 form {  
     margin: 20px;
@@ -16,4 +29,54 @@ form {
     align-items: center;
 }
 
-form div { padding: 2px; }
+.data { 
+    padding: 2px;
+    margin-bottom: 5px;
+    border-color: whitesmoke;
+    border-radius: 7px;
+    border-width: 3px;
+    vertical-align: bottom; 
+}
+
+.button {
+    padding: 12px;
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+    background-color: blueviolet;
+    color: white;
+    font-weight: 565;
+    margin: none;
+    transform: translate(0, 10%);
+}
+
+.button:hover {
+    background-color: purple;
+    color: whitesmoke;
+    font-weight: 570;
+    cursor: pointer;
+}
+
+.join_button {
+    padding: 2px;
+    margin-bottom: 9px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: white;
+    margin: none;
+    transform: translate(0, 10%);
+}
+
+.join_button:hover {
+    background-color: purple;
+    color: whitesmoke;
+    font-weight: 570;
+    cursor: pointer;
+}
+
+small a {
+    color: blueviolet;
+    line-height: 33px;
+}

@@ -19,7 +19,7 @@ function ins_board(&$param) {
     return $result;
 }
 
-// indx.php
+// index.php
 function sel_board_list() {
     $sql=
     "   SELECT B.i_board, B.title, B.created_at, B.hit, B.liked
