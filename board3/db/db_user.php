@@ -25,7 +25,6 @@ function ins_join(&$param) {
     $tel= $param["tel"];
     $addr= $param["addr"];
     $email= $param["email"];
-    $created_at= $param["created_at"];
 
     $conn= get_conn();
     $sql= 

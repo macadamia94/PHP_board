@@ -18,7 +18,7 @@
             <div><input type="text" name="uid" id="uid" class="data" placeholder="아이디" required autofocus></div>
             <input type="hidden" name="decide_id" id="decide_id">
             <div><span id="decide" style='color:red;'>ID 중복 여부를 확인해주세요.</span>
-            <input type="button" id="check_button" class="join_button" value="ID 중복 검사" onclick="checkid();"></div>
+            <input type="button" id="check_button" value="ID 중복 검사" onclick="checkid();"></div>
             <div><input type="password" name="upw" class="data" placeholder="비밀번호" required></div>
             <div><input type="password" name="upw2" class="data" placeholder="비밀번호 확인" required></div>
             <div><input type="text" name="nm" class="data" placeholder="이름" required></div>
@@ -32,7 +32,7 @@
                     <option value="gmail.com">gmail.com</option>
                     <option value="nate.com">nate.com</option>
                 </select> </div>
-            <div><input type="submit" class="button" value="가입하기" disabled></div>
+            <div><input type="submit" class="join_button" value="가입하기"></div>
         </form>        
     </fieldset>
     <small><a href="login.php">이미 회원이신가요?</a></small>

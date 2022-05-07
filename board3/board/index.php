@@ -1,5 +1,5 @@
 <?php
-include_once "db/db_board.php";
+include_once "../db/db_board.php";
 $list= sel_board_list();
 ?>
 <!DOCTYPE html>
