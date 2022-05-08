@@ -25,10 +25,7 @@ if($result) {?>
     <script>
         alert('게시글이 작성되었습니다.');
         location.href= "index.php";
-<<<<<<< HEAD
         // echo ($result);
-=======
->>>>>>> 7c49bf8186859bb13282b84dae3f36c7b80f7eea
     </script>
 <?php } ?>
 
