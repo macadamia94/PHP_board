@@ -1,17 +1,18 @@
 <?php
 include_once "db.php";
 
-// write.php 
+// write_proc.php 
 function ins_board(&$param) {
     $i_user= $param["i_user"];
     $title= $param["title"];
     $ctnt= $param["ctnt"];
+    $filename= $param["filename"];
 
     $sql= 
     "   INSERT INTO t_board
-        (i_user, title, ctnt)
+        (i_user, title, ctnt, file, hit, liked)
         VALUES
-        ($i_user, $title, $ctnt)
+        ($i_user, '$title', '$ctnt', '$filename', 0, 0)
     ";
     $conn= get_conn();
     $result= mysqli_query($conn, $sql);
@@ -32,5 +33,5 @@ function sel_board_list() {
     $conn= get_conn();
     $result= mysqli_query($conn, $sql);
     mysqli_close($conn);
-    return ($result);
+    return $result;
 }

@@ -9,7 +9,7 @@ if(isset($_SESSION["login_user"])) {
 } else { ?>
     <script>
         alert('비회원입니다!');
-        location.href= "login.php";
+        location.href= "../user/login.php";
     </script>
 <?php } ?>
 <!DOCTYPE html>
@@ -18,14 +18,19 @@ if(isset($_SESSION["login_user"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/write.css">
     <title>글쓰기</title>
 </head>
 <body>
-    <form action="write_proc.php" method="post" autocomplete="off">
-        <div><input type="text" size="25" name="title" placeholder="제목" require></div>
-        <hr width="250px" text-align="left">
-        <div><textarea name="ctnt" cols="35" rows="15" placeholder="내용을 입력하세요."></textarea></div>
-        <div><input type="submit" value="글쓰기"></div>
-    </form>
+    <div><a href="index.php">← MAIN</a></div>
+    <div><h3 class="title">글쓰기</h3></div>
+    <form action="write_proc.php" method="post" enctype="multipart/form-data" autocomplete="off">
+        <div><input type="text" class="box" size="25" name="title" placeholder="제목" require></div>
+        <hr color="#9ab6a6">
+        <div><textarea name="ctnt" class="box" cols="83" rows="15" placeholder="내용을 입력하세요."></textarea></div>
+        <hr color="#9ab6a6">
+        <div><input type="file" class="file" id="input_file" name="file"></div>
+        <div><input type="submit" class="btn" value="글쓰기"></div>
+    </form>        
 </body>
 </html>
