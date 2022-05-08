@@ -8,11 +8,6 @@ $ctnt= $_POST["ctnt"];
 $login_user= $_SESSION["login_user"];
 $i_user= $login_user["i_user"];
 
-$error = $_FILES['file']['error'];
-$tmpfile = $_FILES['file']['tmp_name'];
-$filename = $_FILES['file']['name'];
-$folder = "../file".$filename;
-
 $param= [
     "i_user" => $i_user,
     "title" => $title,
@@ -28,19 +23,3 @@ if($result) {?>
         // echo ($result);
     </script>
 <?php } ?>
-
-<?php
-if( $error != UPLOAD_ERR_OK ){
-	switch( $error ) {
-    		case UPLOAD_ERR_INI_SIZE:
-        	case UPLOAD_ERR_FORM_SIZE: ?>
-            <script>
-                alert('파일이 너무 큽니다.');
-                window.history.back()
-            </script>
-    <?php exit;
-	}
-} 
-
-move_uploaded_file($tmpfile, $folder); 
-?>

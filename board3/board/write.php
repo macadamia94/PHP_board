@@ -29,13 +29,8 @@ if(isset($_SESSION["login_user"])) {
         <hr color="#9ab6a6">
         <div><textarea name="ctnt" class="box" cols="83" rows="15" placeholder="내용을 입력하세요."></textarea></div>
         <hr color="#9ab6a6">
-<<<<<<< HEAD
         <input type="file" class="file" id="input_file" name="file">
         <input type="submit" class="btn" value="글쓰기">
-=======
-        <div><input type="file" class="file" id="input_file" name="file"></div>
-        <div><input type="submit" class="btn" value="글쓰기"></div>
->>>>>>> 7c49bf8186859bb13282b84dae3f36c7b80f7eea
     </form>        
 </body>
 </html>
