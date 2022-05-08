@@ -78,3 +78,30 @@ small a {
     color: #00491E;
     line-height: 33px;
 }
+
+/* check.php */
+
+h3 {
+    color: #00491E;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.check {
+    text-align: center;
+}
+
+.check_nm {
+    padding-bottom: 10px;
+}
+
+.check_btn {
+    padding: 3px;
+    margin-bottom: 9px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    background-color: #00491E;
+    color: white;
+    margin: none;
+}
