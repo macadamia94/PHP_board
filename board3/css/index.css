@@ -24,18 +24,23 @@ a:hover
 .top {
     text-align: center;
     color: #00491E;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #00491E;
+    font-weight: bolder;
 }
 
-.middle {
+table {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-bottom: 30px;
+    text-align: center;
+    padding: 10px 0px;
 }
 
-.middle > tr {
-    text-align: center;
+th, td {
+    padding: 10px 0px;
+    border-bottom: 1px solid #74b72e;
 }
 
 .no {
