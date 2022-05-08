@@ -10,10 +10,10 @@
 </head>
 <body>
     <header>
-        <a href="index.php">← MAIN</a>
+        <a href="../board/index.php">← MAIN</a>
     </header>
     <fieldset>
-        <legend><h2>✏️회원가입</h2></legend>
+        <legend><h2>🌻　회원가입　🌻</h2></legend>
         <form action="join_proc.php" method="post" autocomplete="off">
             <div><input type="text" name="uid" id="uid" class="data" placeholder="아이디" required autofocus></div>
             <input type="hidden" name="decide_id" id="decide_id">

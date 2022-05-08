@@ -6,7 +6,7 @@ $param= [
     "uid" => $uid
 ];
 
-$result= sel_join($param);
+$result= sel_user($param);
 
 if(!$result) { ?>
     <span style="color: blue"><?= $uid ?></span> 는 사용 가능한 아이디 입니다.

@@ -1,20 +1,44 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    display: grid; 
-    justify-content: center;
-    align-items: center;
     margin: 30px;
+}
+
+.login {
+    padding-bottom: 15px;
+}
+
+a {
+    float: right;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #00491E;
+}
+
+a:hover 
+{
+    color: green;
+    cursor: pointer;
 }
 
 .top {
     text-align: center;
     color: #00491E;
-    
+    margin-bottom: 30px;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.middle > tr {
+    text-align: center;
 }
 
 .no {
-    float: right;
     font-size: 15px;
     font-weight: bolder;
     color: #00491E;
@@ -29,5 +53,6 @@ body {
 
 .no:hover 
 {
+    color: green;
     cursor: pointer;
 }

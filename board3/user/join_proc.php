@@ -20,7 +20,7 @@ $param= [
     "email" => $email
 ];
 
-$check= sel_join($param);
+$check= sel_user($param);
 $result= ins_join($param);
 
 if(!$check) {

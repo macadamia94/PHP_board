@@ -1,8 +1,8 @@
 <?php
 include_once "db.php";
 
-// check.php, join_proc.php
-function sel_join(&$param) {
+// check.php, join_proc.php, login_proc.php
+function sel_user(&$param) {
     $uid= $param["uid"];
 
     $sql=
