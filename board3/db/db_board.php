@@ -6,13 +6,12 @@ function ins_board(&$param) {
     $i_user= $param["i_user"];
     $title= $param["title"];
     $ctnt= $param["ctnt"];
-    $filename= $param["filename"];
 
     $sql= 
     "   INSERT INTO t_board
-        (i_user, title, ctnt, file, hit, liked)
+        (i_user, title, ctnt, hit, liked)
         VALUES
-        ($i_user, '$title', '$ctnt', '$filename', 0, 0)
+        ($i_user, '$title', '$ctnt', 0, 0)
     ";
     $conn= get_conn();
     $result= mysqli_query($conn, $sql);
