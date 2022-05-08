@@ -27,30 +27,26 @@ $list= sel_board_list();
         <a href="../user/login.php">로그인</a>
     <?php } ?>        
     </div>
-    <div class="top" ><h2>게시판</h2></div>
-    <table class="middle">
-        <thead>
-            <tr>
-                <th width=70>Post ID</th>
-                <th width=300>제목</th>
-                <th width=120>작성자</th>
-                <th width=120>작성일</th>
-                <th width=70>조회수</th>
-                <th width=70>좋아요</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach($list as $item) { ?>
-            <tr>
-                <td><?= $item["i_board"] ?></td>
-                <td><?= $item["title"] ?></td>
-                <td><?= $item["nm"] ?></td>
-                <td><?= $item["created_at"] ?></td>
-                <td><?= $item["hit"] ?></td>
-                <td><?= $item["liked"] ?></td>
-            </tr>
-            <?php } ?>
-        </tbody>
+    <div class="top"><h2>게시판</h2></div>
+    <table>
+        <tr>
+            <th width=100>Post ID</th>
+            <th width=300>제목</th>
+            <th width=120>작성자</th>
+            <th width=200>작성일</th>
+            <th width=70>조회수</th>
+            <th width=70>❤</th>
+        </tr>
+        <?php foreach($list as $item) { ?>
+        <tr>
+            <td><?= $item["i_board"] ?></td>
+            <td><?= $item["title"] ?></td>
+            <td><?= $item["nm"] ?></td>
+            <td><?= $item["created_at"] ?></td>
+            <td><?= $item["hit"] ?></td>
+            <td><?= $item["liked"] ?></td>
+        </tr>
+        <?php } ?>
     </table>
     <center>
         <button class="no" onclick="location.href='write.php'">글쓰기</button>        

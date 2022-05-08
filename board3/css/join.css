@@ -12,6 +12,11 @@ header a {
     text-decoration: none;
 }
 
+header a:hover {
+    color: green;
+    cursor: pointer;
+}
+
 fieldset {
     border-radius: 8px;
     border-color: #00491E;
@@ -50,8 +55,6 @@ form {
 
 .join_button:hover {
     background-color: green;
-    color: whitesmoke;
-    font-weight: 570;
     cursor: pointer;
 }
 
@@ -69,8 +72,6 @@ form {
 
 #check_button:hover {
     background-color: green;
-    color: whitesmoke;
-    font-weight: 570;
     cursor: pointer;
 }
 
