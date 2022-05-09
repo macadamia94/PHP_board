@@ -31,6 +31,10 @@ hr {
     border: none;
 }
 
+.box:focus {
+    outline: none;
+}
+
 .btn {
     float: right;
     padding: 2px;
