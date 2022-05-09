@@ -34,3 +34,21 @@ function sel_board_list() {
     mysqli_close($conn);
     return $result;
 }
+
+// detail.php
+function sel_board(&$param) {
+    $i_board= $param["i_board"];
+
+    $sql= 
+    "   SELECT B.title, B.ctnt, B.created_at, B.hit, B.liked
+             , U.i_user, U.nm
+          FROM t_board B
+         INNER JOIN t_user U
+            ON B.i_user = U.i_user
+         WHERE B.i_board = $i_board
+    ";
+    $conn= get_conn();
+    $result= mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    return mysqli_fetch_assoc($result);
+}

@@ -9,13 +9,25 @@ body {
 }
 
 a {
-    float: right;
     text-decoration: none;
     font-weight: bolder;
     color: #00491E;
 }
 
 a:hover 
+{
+    color: green;
+    cursor: pointer;
+}
+
+.login > a {
+    float: right;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #00491E;
+}
+
+.login > a:hover 
 {
     color: green;
     cursor: pointer;
