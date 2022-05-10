@@ -48,21 +48,27 @@ if(!is_dir($folder)) {
     mkdir($folder, 0777, true);
 }
 
-move_uploaded_file($tmp_file, $folder . "/" . $target_filenm);
+$imageUpload= move_uploaded_file($tmp_file, $folder . "/" . $target_filenm);
+if($imageUpload) {
+    $param= [
+        "files" => $target_filenm
+    ];
+} else {
+    $param= [
+        "files" => null
+    ];
+}
 
-$param= [
+$param+= [
     "i_user" => $i_user,
     "title" => $title,
     "ctnt" => $ctnt,
-    "files" => $target_filenm
 ];
-
 $result= ins_board($param);
-
 if($result) {
     echo 
     "<script>
         alert('게시글이 작성되었습니다.');
         location.replace('index.php');
     </script> ";
-} 
+}

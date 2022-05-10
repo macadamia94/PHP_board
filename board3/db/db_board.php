@@ -7,14 +7,13 @@ function ins_board(&$param) {
     $title= $param["title"];
     $ctnt= $param["ctnt"];
     $target_filenm= $param["files"];
-
+    $files= $param["files"] == ' ' ? NULL : $target_filenm;
+    
     $sql= 
     "   INSERT INTO t_board
         (i_user, title, ctnt, files, hit, liked)
         VALUES
-        ($i_user, '$title', '$ctnt', '$target_filenm', 0, 0)
-
-
+        ($i_user, '$title', '$ctnt', '$files', 0, 0)
     ";
     $conn= get_conn();
     $result= mysqli_query($conn, $sql);
