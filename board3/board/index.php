@@ -24,7 +24,8 @@ $list= sel_board_list();
     <?php if(isset($_SESSION["login_user"])){ ?>
         <a href="../user/logout.php">로그아웃</a>
     <?php }else{ ?>
-        <a href="../user/login.php">로그인</a>
+        <a href="../user/join.php"><button class="bnt">회원가입</button></a> 
+        <a href="../user/login.php"><button class="bnt">로그인</button></a>
     <?php } ?>        
     </div>
     <div class="top"><h2>게시판</h2></div>
@@ -36,6 +37,7 @@ $list= sel_board_list();
             <th width=200>작성일</th>
             <th width=70>조회수</th>
             <th width=70>❤</th>
+            <th width=100>파일</th>
         </tr>
         <?php foreach($list as $item) { ?>
         <tr>
@@ -45,6 +47,7 @@ $list= sel_board_list();
             <td><?= $item["created_at"] ?></td>
             <td><?= $item["hit"] ?></td>
             <td><?= $item["liked"] ?></td>
+            <td><?= $item["files"] === null ? ' ' : '<img src="../files/file.png" width="20px">' ?></td>
         </tr>
         <?php } ?>
     </table>

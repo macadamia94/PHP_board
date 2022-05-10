@@ -29,7 +29,7 @@ if(isset($_SESSION["login_user"])) {
         <hr color="#9ab6a6">
         <div><textarea name="ctnt" class="box" cols="83" rows="15" placeholder="내용을 입력하세요."></textarea></div>
         <hr color="#9ab6a6">
-        <input type="file" class="file" id="input_file" name="file">
+        <input type="file" class="files" name="files">
         <input type="submit" class="btn" value="글쓰기">
     </form>        
 </body>

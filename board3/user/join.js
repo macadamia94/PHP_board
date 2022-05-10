@@ -31,3 +31,18 @@ function address() {
     url= "addr.php";
     window.open(url, "addr", "width=500,height=400, scrollbars=no, resizable=no");
 }
+
+function email_change(){
+    if(document.join.sel_email.options[document.join.sel_email.selectedIndex].value == '0'){
+        document.join.email2.disabled = true;
+        document.join.email2.value = "";   
+    }
+    if(document.join.sel_email.options[document.join.sel_email.selectedIndex].value == '1'){
+        document.join.email2.disabled = false;
+        document.join.email2.value = "";
+        document.join.email2.focus();
+    } else {
+        document.join.email2.disabled = true;
+        document.join.email2.value = document.join.sel_email.options[document.join.sel_email.selectedIndex].value;
+       }
+}

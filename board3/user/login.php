@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <header>
-            <a href="index.php">← MAIN</a>        
+            <a href="../board/index.php">← MAIN</a>        
         </header>
         <fieldset>
             <legend><h2>🌻 로그인 🌻</h2></legend>

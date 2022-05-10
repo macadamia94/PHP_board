@@ -6,24 +6,28 @@ function ins_board(&$param) {
     $i_user= $param["i_user"];
     $title= $param["title"];
     $ctnt= $param["ctnt"];
+    $target_filenm= $param["files"];
 
     $sql= 
     "   INSERT INTO t_board
-        (i_user, title, ctnt, hit, liked)
+        (i_user, title, ctnt, files, hit, liked)
         VALUES
-        ($i_user, '$title', '$ctnt', 0, 0)
+        ($i_user, '$title', '$ctnt', '$target_filenm', 0, 0)
+
+
     ";
     $conn= get_conn();
     $result= mysqli_query($conn, $sql);
     mysqli_close($conn);
+    // echo "$result";
     return $result;
 }
 
 // index.php
 function sel_board_list() {
     $sql=
-    "   SELECT B.i_board, B.title, B.created_at, B.hit, B.liked
-             , U.nm
+    "   SELECT B.i_board, B.title, B.created_at, B.files, B.hit, B.liked
+             , U.i_user, U.nm
           FROM t_board B
          INNER JOIN t_user U
             ON B.i_user = U.i_user
@@ -40,7 +44,7 @@ function sel_board(&$param) {
     $i_board= $param["i_board"];
 
     $sql= 
-    "   SELECT B.title, B.ctnt, B.created_at, B.hit, B.liked
+    "   SELECT B.title, B.ctnt, B.created_at, B.files, B.hit, B.liked
              , U.i_user, U.nm
           FROM t_board B
          INNER JOIN t_user U
