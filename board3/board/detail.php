@@ -28,6 +28,6 @@ $item= sel_board($param);
     <hr color="#9ab6a6">
     <div><textarea name="ctnt" class="box" cols="83" rows="15" placeholder="내용을 입력하세요."><?=$item["ctnt"]?></textarea></div>
     <hr color="#9ab6a6">
-    <div><a href="../files/upload/<?=$item["i_user"]?>/<?=$item["files"]?>" download><?= $item["files"] === ' ' ? '파일없음' : $item["files"]?></a></div>
+    <div><a href="../files/upload/<?=$item["i_user"]?>/<?=$item["files"]?>" download><?= $item["files"] == '' ? '파일없음' : $item["files"]?></a></div>
 </body>
 </html>
