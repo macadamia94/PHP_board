@@ -8,7 +8,7 @@ $upw2= $_POST["upw2"];
 $nm= $_POST["nm"];
 $tel= $_POST["tel"];
 $addr= $_POST["addr"];
-$email= $_POST["email1"].'@'.$_POST["email2"];
+$email= $_POST["email1"]."@".$_POST["email"];
 
 $param= [
     "uid" => $uid,
@@ -32,8 +32,8 @@ if(!$check) {
         if($result) { ?>
             <script>
                 alert('회원가입이 완료되었습니다.');
-                // location.replace('login.php');
-                echo ("$result");
+                location.replace('login.php');
+                // echo ("$result");
             </script>
         <?php exit; } else { ?>
             <script>

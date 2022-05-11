@@ -33,16 +33,17 @@ function address() {
 }
 
 function email_change(){
-    if(document.join.sel_email.options[document.join.sel_email.selectedIndex].value == '0'){
+    if(document.join.email.options[document.join.email.selectedIndex].value == '0'){
         document.join.email2.disabled = true;
-        document.join.email2.value = "";   
+        document.join.email2.value = "";
     }
-    if(document.join.sel_email.options[document.join.sel_email.selectedIndex].value == '1'){
+    if(document.join.email.options[document.join.email.selectedIndex].value == '1'){
         document.join.email2.disabled = false;
         document.join.email2.value = "";
         document.join.email2.focus();
-    } else {
+    } else{
         document.join.email2.disabled = true;
-        document.join.email2.value = document.join.sel_email.options[document.join.sel_email.selectedIndex].value;
-       }
+        document.join.email.value = document.join.email.options[document.join.email.selectedIndex].value;
+        document.join.email2.value = document.join.email.options[document.join.email.selectedIndex].value;
+    }
 }

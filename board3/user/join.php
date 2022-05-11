@@ -24,8 +24,8 @@
             <div><input type="tel" name="tel" class="data" placeholder="숫자만 입력하세요" required></div>
             <div><input type="text" name="addr" id="addr" class="data" onclick="address();" placeholder="주소를 검색해주세요" required></div>
             <div><input type="text" name="email1" class="data" onfocus="this.value=''" placeholder="이메일 주소" required>
-               @ <input type="text" name="email2" class="data" value="" disabled>
-                <select name="sel_email" class="data" onchange="email_change()">
+               @ <input type="text" name="email2" class="data" value = "" disabled>
+                <select name="email" class="data" onchange="email_change()">
                     <option value="0">선택하세요</option>
                     <option value="naver.com">naver.com</option>
                     <option value="hanmail.net">hanmail.net</option>
