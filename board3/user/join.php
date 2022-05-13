@@ -35,7 +35,7 @@
                     <option value="1">직접입력</option>
                 </select> 
             </div>
-            <div><input type="submit" class="join_button" value="가입하기"></div>
+            <div><input type="button" ondblclick="upw_check()" class="join_button" value="가입하기"></div>
         </form>        
     </fieldset>
     <small><a href="login.php">이미 회원이신가요?</a></small>

@@ -47,3 +47,30 @@ function email_change(){
         document.join.email2.value = document.join.email.options[document.join.email.selectedIndex].value;
     }
 }
+
+function upw_check() {
+    var upw = document.getElementById("upw");
+    var upw2 = document.getElementById("upw2");
+    var nm = document.getElementById("nm");
+    var tel = document.getElementById("tel");
+
+    if(upw.value == "") {
+        alert("비밀번호를 입력해주세요.");
+        upw. focus();
+        return false;
+    }
+
+    var upwCheck = /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,12}$/;
+
+    if (!upwCheck. test(upw.value)) {
+        alert("비밀번호는 영문자+숫자 조합으로 6~12자리 사용해야 합니다.");
+        upw.focus();
+        return false;
+    }
+
+    if (upw2.value !== upw.value) {
+        alert("비밀번호가 일치하지 않습니다.");
+        upw2.focus();
+        return focus;
+    }
+}
