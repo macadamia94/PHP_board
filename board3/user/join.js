@@ -53,6 +53,7 @@ function upw_check() {
     var upw2 = document.getElementById("upw2");
     var nm = document.getElementById("nm");
     var tel = document.getElementById("tel");
+    var email1 = document.getElementById("email1");
 
     if(upw.value == "") {
         alert("비밀번호를 입력해주세요.");
@@ -72,5 +73,23 @@ function upw_check() {
         alert("비밀번호가 일치하지 않습니다.");
         upw2.focus();
         return focus;
+    }
+
+    if(nm.value == "") {
+        alert("이름을 입력해주세요.");
+        nm.focus();
+        return false;
+    }
+
+    var reg = /^[0-9]+/g;
+
+    if(!reg.test(tel.value)) {
+        alert("전화번호는 숫자만 입력할 수 있습니다.");
+        tel.focus();
+        return false;
+    }
+
+    if(email1.value == "") {
+        alert("")
     }
 }
