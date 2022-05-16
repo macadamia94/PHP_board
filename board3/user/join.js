@@ -13,18 +13,18 @@ function decide() {
     document.getElementById("decide").innerHTML = "<span style='color:blue;'>사용 가능한 아이디 입니다.</span>"
     document.getElementById("decide_id").value = document.getElementById("uid").value
 	document.getElementById("uid").disabled = true
+    document.getElementById("join_button").disabled = false
     document.getElementById("check_button").value = "다른 ID로 변경"
 	document.getElementById("check_button").setAttribute("onclick", "change()")
-	document.getElementById("join_button").disabled = false
 }
 
 function change() {
     document.getElementById("decide").innerHTML = "<span style='color:red;'>ID 중복 여부를 확인해주세요.</span>"
     document.getElementById("uid").disabled = false
 	document.getElementById("uid").value = ""
+    document.getElementById("join_button").disabled = true
     document.getElementById("check_button").value = "ID 중복 검사"
 	document.getElementById("check_button").setAttribute("onclick", "checkid()")
-	document.getElementById("join_button").disabled = true
 }
 
 function address() {
@@ -43,17 +43,24 @@ function email_change(){
         document.join.email2.focus();
     } else{
         document.join.email2.disabled = true;
-        document.join.email.value = document.join.email.options[document.join.email.selectedIndex].value;
         document.join.email2.value = document.join.email.options[document.join.email.selectedIndex].value;
     }
 }
 
-function upw_check() {
+function check() {
+    var uid = document.getElementById("uid");
     var upw = document.getElementById("upw");
     var upw2 = document.getElementById("upw2");
     var nm = document.getElementById("nm");
     var tel = document.getElementById("tel");
+    var addr = document.getElementById("addr");
     var email1 = document.getElementById("email1");
+
+    if(uid.value == "") {
+        alert("아이디를 입력해주세요.");
+        upw. focus();
+        return false;
+    }
 
     if(upw.value == "") {
         alert("비밀번호를 입력해주세요.");
@@ -89,7 +96,17 @@ function upw_check() {
         return false;
     }
 
-    if(email1.value == "") {
-        alert("")
+    if(addr.value == "") {
+        alert("주소를 입력하세요.");
+        email1.focus();
+        return false;
     }
+
+    if(email1.value == "") {
+        alert("이메일 주소를 입력하세요.");
+        email1.focus();
+        return false;
+    }
+
+    document.join.submit();
 }

@@ -42,9 +42,4 @@ if(!$check) {
             </script>
         <?php }
     }
-} else { ?>
-    <script>
-        alert('아이디가 중복됩니다.'); 
-        history.back();
-    </script>
-<?php } ?>
+} ?>
