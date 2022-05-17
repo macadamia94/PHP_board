@@ -11,19 +11,19 @@ header {
 }
 
 header > a {
-    color: #00491E;
+    color: #800080;
     text-decoration: none;
 }
 
 fieldset {
     border-radius: 8px;
-    border-color: #00491E;
+    border-color: #800080;
     margin-bottom: 10px;
 }
 
 fieldset legend { 
     text-align: center; 
-    color: #00491E;
+    color: #800080;
 }
 
 form {  
@@ -44,14 +44,14 @@ form {
     width: 174px;
     border: none;
     border-radius: 8px;
-    background-color: #00491E;
+    background-color: #800080;
     color: white;
     font-weight: 565;
     margin: none;
 }
 
 .button:hover {
-    background-color: green;
+    background-color: #8a2be2;
     color: whitesmoke;
     font-weight: 570;
     cursor: pointer;
@@ -60,11 +60,11 @@ form {
 small > a {
     display: flex;
     justify-content: center;
-    color: #00491E;
+    color: #800080;
 
 }
 
 small > a:hover {
-    color: green;
+    color: #8a2be2;
     cursor: pointer;
 }

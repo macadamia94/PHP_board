@@ -8,24 +8,24 @@ body {
 }
 
 header a {
-    color: #00491E;
+    color: #800080;
     text-decoration: none;
 }
 
 header a:hover {
-    color: green;
+    color: #8a2be2;
     cursor: pointer;
 }
 
 fieldset {
     border-radius: 8px;
-    border-color: #00491E;
+    border-color: #800080;
     margin-bottom: 10px;
 }
 
 fieldset legend { 
     text-align: center; 
-    color: #00491E;
+    color: #800080;
 }
 
 form {  
@@ -46,7 +46,7 @@ form {
     width: 200px;
     border: none;
     border-radius: 8px;
-    background-color: #00491E;
+    background-color: #800080;
     color: white;
     font-weight: 565;
     margin: none;
@@ -54,7 +54,7 @@ form {
 }
 
 .join_button:hover {
-    background-color: green;
+    background-color: #8a2be2;
     cursor: pointer;
 }
 
@@ -64,26 +64,26 @@ form {
     width: auto;
     border: none;
     border-radius: 5px;
-    background-color: #00491E;
+    background-color: #800080;
     color: white;
     margin: none;
     transform: translate(0, 10%);
 }
 
 #check_button:hover {
-    background-color: green;
+    background-color: #8a2be2;
     cursor: pointer;
 }
 
 small a {
-    color: #00491E;
+    color: #800080;
     line-height: 33px;
 }
 
 /* check.php */
 
 h3 {
-    color: #00491E;
+    color: #800080;
     text-align: center;
     padding-bottom: 20px;
 }
@@ -102,7 +102,7 @@ h3 {
     width: auto;
     border: none;
     border-radius: 5px;
-    background-color: #00491E;
+    background-color: #800080;
     color: white;
     margin: none;
 }
