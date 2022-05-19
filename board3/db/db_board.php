@@ -76,7 +76,7 @@ function del_board(&$param) {
 // mod_proc.php
 function upd_board(&$param) {
     $i_board= $param["i_board"];
-    $i_user= $param["i_board"];
+    $i_user= $param["i_user"];
     $title= $param["title"];
     $ctnt= $param["ctnt"];
 
@@ -85,8 +85,8 @@ function upd_board(&$param) {
            SET title= '$title'
              , ctnt= '$ctnt'
              , updated_at= now()
-         WHERE i_board= $i_board
-           AND i_user= $i_user 
+         WHERE i_board= {$i_board}
+           AND i_user= {$i_user}
     ";
     $conn= get_conn();
     $result= mysqli_query($conn, $sql);

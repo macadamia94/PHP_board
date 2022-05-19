@@ -35,6 +35,9 @@ textarea { resize: none; }
 
 .w_box {
     border: none;
+    font-family: 'Jua', sans-serif;
+    font-size: medium;
+    width: 550px;
 }
 
 .w_box:focus {
@@ -44,15 +47,15 @@ textarea { resize: none; }
 .btn {
     float: right;
     padding: 5px;
-    /* margin-bottom: 9px; */
     width: auto;
     border: 2px solid blueviolet;
     border-radius: 7px;
     font-weight: bold;
     color: blueviolet;
     background-color: white;
-    margin: none;
-    /* transform: translate(0, 10%); */
+    margin: 2px; 
+    padding: 5px 11px;
+    font-family: 'Jua', sans-serif; 
 }
 
 .btn:hover {
@@ -79,7 +82,7 @@ textarea { resize: none; }
     font-family: 'Jua', sans-serif;
     font-size: medium;
     font-weight: bold;
-    width: 602px;
+    width: 550px;
     height: 229px;
 }
 

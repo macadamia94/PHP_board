@@ -1,11 +1,5 @@
 <?php
     include_once "../db/db_board.php";
-    session_start();
-
-    if(isset($_SESSION["login_user"])) {
-        $login_user= $_SESSION["login_user"];
-    }
-
     $i_board= $_GET["i_board"];
     $param= [
         "i_board" => $i_board
@@ -26,12 +20,14 @@
 <body>
     <div class="back"><a href="detail.php?i_board=<?=$i_board?>">← BACK</a></div>
     <div class="d_title"><h2>글수정 | <?=$item["nm"]?></h2></div>
-    <div class="d_box"><?=$item["title"]?></div>     
-    <hr color="#ddb9ff">
-    <div class="d_box_c"><?=nl2br($item["ctnt"])?></div>
-    <hr color="#ddb9ff">
-    <div >
-
-    </div>
+    <form action="mod_proc.php" method="post" enctype="multipart/form-data" autocomplete="off">
+        <input type="hidden" name="i_board" value="<?=$i_board?>" readonly>
+        <div><input type="text" class="w_box" size="25" name="title" placeholder="제목" value="<?=$item["title"]?>" require></div>
+        <hr color="#ddb9ff">
+        <div><textarea name="ctnt" class="w_box" cols="83" rows="15" placeholder="내용을 입력하세요."><?=$item["ctnt"]?></textarea></div>
+        <hr color="#ddb9ff">
+        <div><input type="file" class="file" name="files"></div>
+        <div><input type="submit" class="btn" value="작성하기"></div>
+    </form> 
 </body>
 </html>
