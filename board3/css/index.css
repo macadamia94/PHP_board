@@ -61,6 +61,18 @@ th, td {
     border-bottom: 1px solid rgb(226, 185, 226);
 }
 
+.index_title > a {
+    text-decoration: none;
+    color: black;
+}
+
+.index_title > a:hover {
+    color: blueviolet;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
 .no {
     font-size: 15px;
     font-weight: bolder;
@@ -70,7 +82,7 @@ th, td {
     text-align: center;
     background-color: white;
     border: 2px solid blueviolet;
-    border-radius: 11px;
+    border-radius: 7px;
     margin-right: 10px;
 }
 

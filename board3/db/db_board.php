@@ -48,10 +48,27 @@ function sel_board(&$param) {
           FROM t_board B
          INNER JOIN t_user U
             ON B.i_user = U.i_user
-         WHERE B.i_board = $i_board
+         WHERE B.i_board = {$i_board}
     ";
     $conn= get_conn();
     $result= mysqli_query($conn, $sql);
     mysqli_close($conn);
     return mysqli_fetch_assoc($result);
+}
+
+// delete.php
+function del_board(&$param) {
+    $i_board= $param["i_board"];
+    $i_user= $param["i_user"];
+
+    $sql= 
+    "   DELETE FROM t_board
+         WHERE i_board= {$i_board}
+           AND i_user= {$i_user}
+    ";
+
+    $conn= get_conn();
+    $result= mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    return $result;
 }

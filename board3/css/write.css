@@ -3,12 +3,12 @@ body {
     justify-content: center;
 }
 
-a {
+.back > a {
     color: blueviolet;
     text-decoration: none;
 }
 
-a:hover {
+.back > a:hover {
     color: purple;
     cursor: pointer;
 }
@@ -27,28 +27,75 @@ hr {
     text-align: left;
 }
 
-.box {
+textarea { resize: none; }
+
+/* write.php */
+
+.w_box {
     border: none;
 }
 
-.box:focus {
+.w_box:focus {
     outline: none;
 }
 
 .btn {
     float: right;
-    padding: 2px;
-    margin-bottom: 9px;
+    padding: 5px;
+    /* margin-bottom: 9px; */
     width: auto;
-    border: none;
-    border-radius: 5px;
-    background-color: blueviolet;
-    color: white;
+    border: 2px solid blueviolet;
+    border-radius: 7px;
+    font-weight: bold;
+    color: blueviolet;
+    background-color: white;
     margin: none;
-    transform: translate(0, 10%);
+    /* transform: translate(0, 10%); */
 }
 
 .btn:hover {
-    background-color: purple;
+    text-decoration: underline;
     cursor: pointer;
 }
+
+/* detail.php */
+
+.d_box {
+    border: none;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+}
+
+.d_box_c {
+    border: none;
+    font-size: medium;
+    font-weight: bold;
+    width: 602px;
+    height: 229px;
+}
+
+.d_box:focus, .d_box_c:focus {
+    outline: none;
+}
+
+.file > a {
+    color: black;
+    text-decoration: none;
+}
+
+.file > a:hover {
+    color: purple;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.dm_btn { 
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dm_btn > .btn { margin: 5px; padding: 5px 13px; }
+.dm_btn > a > .btn { margin: 5px; padding: 5px 13px; }
+
