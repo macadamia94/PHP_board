@@ -49,11 +49,19 @@ function email_change(){
 }
 
 function upw_check() {
+    var uid = document.getElementById("uid");
     var upw = document.getElementById("upw");
     var upw2 = document.getElementById("upw2");
     var nm = document.getElementById("nm");
     var tel = document.getElementById("tel");
+    var addr = document.getElementById("addr");
     var email1 = document.getElementById("email1");
+
+    if(uid.value == "") {
+        alert("아이디를 입력해주세요.");
+        uid. focus();
+        return false;
+    }
 
     if(upw.value == "") {
         alert("비밀번호를 입력해주세요.");
@@ -81,7 +89,7 @@ function upw_check() {
         return false;
     }
 
-    var reg = /^[0-9]+/g;
+    var reg = /^[0-9].{9,11}$/g;
 
     if(!reg.test(tel.value)) {
         alert("전화번호는 숫자만 입력할 수 있습니다.");
@@ -89,7 +97,15 @@ function upw_check() {
         return false;
     }
 
-    if(email1.value == "") {
-        alert("")
+    if(addr.value == "") {
+        alert("주소를 입력해주세요.");
+        nm.focus();
+        return false;
     }
+
+    if(email1.value == "") {
+        alert("이메일을 입력해주세요.")
+    }
+
+    document.join.submit();
 }

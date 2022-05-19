@@ -29,12 +29,18 @@ fieldset legend {
 }
 
 form {  
-    margin: 20px;
+    margin: 50px;
+}
+
+.at {
+    color: rgb(173, 173, 173);
+    display: inline-block;
+    padding-bottom: 12px;
 }
 
 .data { 
-    padding: 2px;
-    margin-bottom: 5px;
+    padding: 5px;
+    margin-bottom: 6px;
     border-color: whitesmoke;
     border-radius: 7px;
     border-width: 3px;
@@ -74,6 +80,8 @@ form {
     background-color: purple;
     cursor: pointer;
 }
+
+small { text-align: center; }
 
 small a {
     color: blueviolet;

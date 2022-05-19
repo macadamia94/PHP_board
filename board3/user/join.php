@@ -14,18 +14,21 @@
     <fieldset>
         <legend><h2>🌻　회원가입　🌻</h2></legend>
         <form action="join_proc.php" method="post" name="join" autocomplete="off">
-            <div><input type="text" name="uid" id="uid" class="data" placeholder="아이디" required autofocus></div>
+            <div><input type="text" name="uid" id="uid" class="data" placeholder="아이디" required autofocus>
             <input type="hidden" name="decide_id" id="decide_id">
-            <div><span id="decide" style='color:red;'>ID 중복 여부를 확인해주세요.</span>
+            <span id="decide" style='color:red'>ID 중복 여부를 확인해주세요.</span>
             <input type="button" id="check_button" value="ID 중복 검사" onclick="checkid();"></div>
-            <div><input type="password" name="upw" class="data" placeholder="비밀번호" required></div>
-            <div><input type="password" name="upw2" class="data" placeholder="비밀번호 확인" required></div>
-            <div><input type="text" name="nm" class="data" placeholder="이름" required></div>
-            <div><input type="tel" name="tel" class="data" placeholder="숫자만 입력하세요" required></div>
+            <div><input type="password" name="upw" id="upw" class="data" placeholder="비밀번호" required>
+                <span class="at">영문자+숫자 조합으로 6~12자리</span></div>
+            <div><input type="password" name="upw2" id="upw2" class="data" placeholder="비밀번호 확인" required></div>
+            <div><input type="text" name="nm" id="nm" class="data" placeholder="이름" required></div>
+            <div><input type="tel" name="tel" id="tel" class="data" placeholder="전화번호" required>
+                <span class="at">숫자만 입력해주세요.</span></div>
             <div><input type="text" name="addr" id="addr" class="data" onclick="address();" placeholder="주소를 검색해주세요" required></div>
-            <div><input type="text" name="email1" class="data" onfocus="this.value=''" placeholder="이메일 주소" required>
-               @ <input type="text" name="email2" class="data" value = "" disabled>
-                <select name="email" class="data" onchange="email_change()">
+            <div><input type="text" name="email1" id="email1" class="data" onfocus="this.value=''" placeholder="이메일 주소" required> 
+                <span class="at">@</span> 
+                <input type="text" name="email2" id="email2" class="data" value = "" disabled>
+                <select name="email" id="email" class="data" onchange="email_change()">
                     <option value="0">선택하세요</option>
                     <option value="naver.com">naver.com</option>
                     <option value="hanmail.net">hanmail.net</option>
