@@ -11,6 +11,7 @@ $param= [
     "i_board" => $i_board
 ];
 $item= sel_board($param);
+$hit= hit_board($param);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +33,11 @@ $item= sel_board($param);
     <div class="file">
         <?php if($item["files"] == '') { echo "파일없음"; 
             } else { ?><a href="../files/upload/<?=$item["i_user"]?>/<?=$item["files"]?>" download><?=$item["files"]?><?php }?> 
+    </div>
+    <div>
+    <?php if($login_user["i_user"] !== $item["i_user"]) { ?>
+        <label>조회수 <input type="button" value="<?= $hit ?>"></label>
+    <?php }?>
     </div>
     <div class="dm_btn">
     <?php if(isset($_SESSION["login_user"]) && $login_user["i_user"] === $item["i_user"]) { ?>
