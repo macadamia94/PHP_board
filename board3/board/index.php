@@ -15,12 +15,13 @@ $list= sel_board_list();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include_once "../css/font.php"; ?>
     <link rel="stylesheet" href="../css/index.css">
     <title>Board</title>
 </head>
 <body>
     <div class="login">
-    <?=isset($_SESSION["login_user"]) ? "<b>". $nm . "</b>님 환영합니다." : "" ?>
+    <span><?=isset($_SESSION["login_user"]) ? "<b>". $nm . "</b> 님 환영합니다." : "" ?></span>
     <?php if(isset($_SESSION["login_user"])){ ?>
         <a href="../user/logout.php">로그아웃</a>
     <?php }else{ ?>
@@ -28,9 +29,9 @@ $list= sel_board_list();
         <a href="../user/login.php"><button class="bnt">로그인</button></a>
     <?php } ?>        
     </div>
-    <div class="top"><h2>게시판</h2></div>
+    <div class="top"><h1>게시판</h1></div>
     <table>
-        <tr>
+        <tr class="one_tr">
             <th width=100>Post ID</th>
             <th width=300>제목</th>
             <th width=120>작성자</th>
@@ -40,7 +41,7 @@ $list= sel_board_list();
             <th width=100>파일</th>
         </tr>
         <?php foreach($list as $item) { ?>
-        <tr>
+        <tr class="two_tr">
             <td><?= $item["i_board"] ?></td>
             <td class="index_title"><a href="detail.php?i_board=<?=$item["i_board"]?>"><?= $item["title"] ?></a></td>
             <td><?= $item["nm"] ?></td>

@@ -4,6 +4,7 @@ body {
 }
 
 .back > a {
+    font-family: 'Jua', sans-serif;
     color: blueviolet;
     text-decoration: none;
 }
@@ -16,6 +17,7 @@ body {
 .title {
     height: 40;
     float: center;
+    font-family: 'Gugi', cursive;
     font-size: 25px; 
     text-align: center;
     color: blueviolet;
@@ -60,8 +62,13 @@ textarea { resize: none; }
 
 /* detail.php */
 
+.d_title{
+    font-family: 'Gugi', cursive;
+}
+
 .d_box {
     border: none;
+    font-family: 'Jua', sans-serif;
     font-size: larger;
     font-weight: bold;
     text-align: center;
@@ -69,6 +76,7 @@ textarea { resize: none; }
 
 .d_box_c {
     border: none;
+    font-family: 'Jua', sans-serif;
     font-size: medium;
     font-weight: bold;
     width: 602px;
@@ -77,6 +85,11 @@ textarea { resize: none; }
 
 .d_box:focus, .d_box_c:focus {
     outline: none;
+}
+
+.file {
+    font-family: 'Jua', sans-serif;
+    padding-left: 25px;
 }
 
 .file > a {
@@ -90,12 +103,14 @@ textarea { resize: none; }
     text-decoration: underline;
 }
 
-.dm_btn { 
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+.dm_btn > .btn { 
+    margin: 2px; 
+    padding: 5px 10.5px; 
+    font-family: 'Jua', sans-serif; 
 }
-
-.dm_btn > .btn { margin: 5px; padding: 5px 13px; }
-.dm_btn > a > .btn { margin: 5px; padding: 5px 13px; }
+.dm_btn > a > .btn { 
+    margin: 2px; 
+    padding: 5px 11px;
+    font-family: 'Jua', sans-serif; 
+}
 

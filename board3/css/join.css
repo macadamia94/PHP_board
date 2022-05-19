@@ -10,6 +10,7 @@ body {
 header a {
     color: blueviolet;
     text-decoration: none;
+    font-family: 'Jua', sans-serif;
 }
 
 header a:hover {
@@ -24,6 +25,7 @@ fieldset {
 }
 
 fieldset legend { 
+    font-family: 'Gugi', cursive;
     text-align: center; 
     color: blueviolet;
 }
@@ -36,9 +38,11 @@ form {
     color: rgb(173, 173, 173);
     display: inline-block;
     padding-bottom: 12px;
+    font-family: 'Jua', sans-serif;
 }
 
 .data { 
+    font-family: 'Jua', sans-serif;
     padding: 5px;
     margin-bottom: 6px;
     border-color: whitesmoke;
@@ -47,14 +51,17 @@ form {
     vertical-align: bottom; 
 }
 
+.data > #decide { font-family: 'Jua', sans-serif; }
+
 .join_button {
-    padding: 12px;
+    padding: 10px;
     width: 200px;
     border: none;
     border-radius: 8px;
     background-color: blueviolet;
     color: white;
-    font-weight: 565;
+    font-size: medium;
+    font-family: 'Jua', sans-serif;
     margin: none;
     transform: translate(0, 10%);
 }
@@ -65,6 +72,7 @@ form {
 }
 
 #check_button {
+    font-family: 'Jua', sans-serif;
     padding: 2px;
     margin-bottom: 9px;
     width: auto;
@@ -84,6 +92,8 @@ form {
 small { text-align: center; }
 
 small a {
+    font-family: 'Jua', sans-serif;
+    font-size: medium;
     color: blueviolet;
     line-height: 33px;
 }

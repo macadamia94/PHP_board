@@ -18,12 +18,13 @@ $item= sel_board($param);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include_once "../css/font.php"; ?>
     <link rel="stylesheet" href="../css/write.css">
     <title><?=$item["title"]?></title>
 </head>
 <body>
     <div class="back"><a href="index.php">← MAIN</a></div>
-    <h2>글조회 | <?=$item["nm"]?></h2>
+    <div class="d_title"><h2>글조회 | <?=$item["nm"]?></h2></div>
     <div class="d_box"><?=$item["title"]?></div>
     <hr color="#ddb9ff">
     <div class="d_box_c"><?=nl2br($item["ctnt"])?></div>
@@ -34,8 +35,8 @@ $item= sel_board($param);
     </div>
     <div class="dm_btn">
     <?php if(isset($_SESSION["login_user"]) && $login_user["i_user"] === $item["i_user"]) { ?>
-        <a href="../board/mod.php?i_board=<?=$i_board?>"><button class="btn">수정</button></a>
         <button class="btn" onclick="isDel();">삭제</button>
+        <a href="../board/mod.php?i_board=<?=$i_board?>"><button class="btn">수정</button></a>
     <?php } ?>
     </div>
     <script>

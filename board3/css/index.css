@@ -5,11 +5,11 @@ body {
 }
 
 .login {
-    padding-bottom: 15px;
+    padding-bottom: 30px;
 }
 
 .bnt {
-    font-weight: bolder;
+    font-family: 'Jua', sans-serif;
     color: blueviolet;
     height: 30px;
     width: 65px;
@@ -26,10 +26,11 @@ body {
     cursor: pointer;
 }
 
+.login > span { font-family: 'Jua', sans-serif; }
 .login > a {
     float: right;
     text-decoration: none;
-    font-weight: bolder;
+    font-family: 'Jua', sans-serif;
     color: blueviolet;
 }
 
@@ -40,12 +41,22 @@ body {
 }
 
 .top {
+    font-family: 'Gugi', cursive;
     text-align: center;
     color: blueviolet;
     margin-bottom: 50px;
     padding-bottom: 15px;
     border-bottom: 1px solid blueviolet;
     font-weight: bolder;
+}
+
+.one_tr > th {
+    font-family: 'Gugi', cursive;
+    font-size: large;
+}
+
+.two_tr > td {
+    font-family: 'Jua', sans-serif;
 }
 
 table {
@@ -75,7 +86,7 @@ th, td {
 
 .no {
     font-size: 15px;
-    font-weight: bolder;
+    font-family: 'Jua', sans-serif;
     color: blueviolet;
     height: 30px;
     width: 65px;

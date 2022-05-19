@@ -18,6 +18,7 @@ if(isset($_SESSION["login_user"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include_once "../css/font.php"; ?>
     <link rel="stylesheet" href="../css/write.css">
     <title>글쓰기</title>
 </head>

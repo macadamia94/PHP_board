@@ -72,3 +72,24 @@ function del_board(&$param) {
     mysqli_close($conn);
     return $result;
 }
+
+// mod_proc.php
+function upd_board(&$param) {
+    $i_board= $param["i_board"];
+    $i_user= $param["i_board"];
+    $title= $param["title"];
+    $ctnt= $param["ctnt"];
+
+    $sql= 
+    "   UPDATE t_board
+           SET title= '$title'
+             , ctnt= '$ctnt'
+             , updated_at= now()
+         WHERE i_board= $i_board
+           AND i_user= $i_user 
+    ";
+    $conn= get_conn();
+    $result= mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    return $result;
+}
