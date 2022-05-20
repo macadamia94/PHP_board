@@ -11,6 +11,7 @@ $param= [
     "i_board" => $i_board
 ];
 $item= sel_board($param);
+$hit= hit_board($param);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,16 +19,38 @@ $item= sel_board($param);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include_once "../css/font.php"; ?>
     <link rel="stylesheet" href="../css/write.css">
     <title><?=$item["title"]?></title>
 </head>
 <body>
-    <div><a href="index.php">← MAIN</a></div>
-    <h2>글조회 | <?=$item["nm"]?></h2>
-    <div><input type="text" class="box" size="25" name="title" placeholder="제목" value="<?=$item["title"]?>"></div>
-    <hr color="#9ab6a6">
-    <div><textarea name="ctnt" class="box" cols="83" rows="15" placeholder="내용을 입력하세요."><?=$item["ctnt"]?></textarea></div>
-    <hr color="#9ab6a6">
-    <div><a href="../files/upload/<?=$item["i_user"]?>/<?=$item["files"]?>" download><?= $item["files"] == '' ? '파일없음' : $item["files"]?></a></div>
+    <div class="back"><a href="index.php">← MAIN</a></div>
+    <div class="d_title"><h2>글조회 | <?=$item["nm"]?></h2></div>
+    <div class="d_box"><?=$item["title"]?></div>
+    <hr color="#ddb9ff">
+    <div class="d_box_c"><?=nl2br($item["ctnt"])?></div>
+    <hr color="#ddb9ff">
+    <div class="file">
+        <?php if($item["files"] == '') { echo "파일없음"; 
+            } else { ?><a href="../files/upload/<?=$item["i_user"]?>/<?=$item["files"]?>" download><?=$item["files"]?><?php }?> 
+    </div>
+    <div>
+    <?php if($login_user["i_user"] !== $item["i_user"]) { ?>
+        <label>조회수 <input type="button" value="<?= $hit ?>"></label>
+    <?php }?>
+    </div>
+    <div class="dm_btn">
+    <?php if(isset($_SESSION["login_user"]) && $login_user["i_user"] === $item["i_user"]) { ?>
+        <button class="btn" onclick="isDel();">삭제</button>
+        <a href="../board/mod.php?i_board=<?=$i_board?>"><button class="btn">수정</button></a>
+    <?php } ?>
+    </div>
+    <script>
+        function isDel() {
+            if(confirm('정말 삭제하시겟습니까?')) {
+                location.href= "del.php?i_board=<?=$i_board?>";
+            }
+        }
+    </script>
 </body>
 </html>

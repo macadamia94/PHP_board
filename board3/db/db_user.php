@@ -8,7 +8,7 @@ function sel_user(&$param) {
     $sql=
     "   SELECT i_user, uid, upw, nm, tel, addr, email
         FROM t_user
-        WHERE uid = '${uid}'
+        WHERE uid = '{$uid}'
     ";
 
     $conn= get_conn();

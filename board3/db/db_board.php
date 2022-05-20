@@ -48,10 +48,63 @@ function sel_board(&$param) {
           FROM t_board B
          INNER JOIN t_user U
             ON B.i_user = U.i_user
-         WHERE B.i_board = $i_board
+         WHERE B.i_board = {$i_board}
     ";
     $conn= get_conn();
     $result= mysqli_query($conn, $sql);
     mysqli_close($conn);
     return mysqli_fetch_assoc($result);
+}
+
+// hit
+function hit_board(&$param) {
+    $i_board= $param["i_board"];
+
+    $sql= 
+    "   UPDATE t_board
+           SET hit = hit + 1
+         WHERE i_board= {$i_board}
+    ";
+    $conn= get_conn();
+    $result= mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    return $result;
+}
+
+// delete.php
+function del_board(&$param) {
+    $i_board= $param["i_board"];
+    $i_user= $param["i_user"];
+
+    $sql= 
+    "   DELETE FROM t_board
+         WHERE i_board= {$i_board}
+           AND i_user= {$i_user}
+    ";
+
+    $conn= get_conn();
+    $result= mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    return $result;
+}
+
+// mod_proc.php
+function upd_board(&$param) {
+    $i_board= $param["i_board"];
+    $i_user= $param["i_user"];
+    $title= $param["title"];
+    $ctnt= $param["ctnt"];
+
+    $sql= 
+    "   UPDATE t_board
+           SET title= '$title'
+             , ctnt= '$ctnt'
+             , updated_at= now()
+         WHERE i_board= {$i_board}
+           AND i_user= {$i_user}
+    ";
+    $conn= get_conn();
+    $result= mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    return $result;
 }

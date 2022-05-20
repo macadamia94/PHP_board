@@ -47,7 +47,11 @@ function email_change(){
     }
 }
 
+<<<<<<< HEAD
 function check() {
+=======
+function upw_check() {
+>>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     var uid = document.getElementById("uid");
     var upw = document.getElementById("upw");
     var upw2 = document.getElementById("upw2");
@@ -58,7 +62,11 @@ function check() {
 
     if(uid.value == "") {
         alert("아이디를 입력해주세요.");
+<<<<<<< HEAD
         upw. focus();
+=======
+        uid. focus();
+>>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
         return false;
     }
 
@@ -88,7 +96,7 @@ function check() {
         return false;
     }
 
-    var reg = /^[0-9]+/g;
+    var reg = /^[0-9].{9,11}$/g;
 
     if(!reg.test(tel.value)) {
         alert("전화번호는 숫자만 입력할 수 있습니다.");
@@ -97,15 +105,24 @@ function check() {
     }
 
     if(addr.value == "") {
+<<<<<<< HEAD
         alert("주소를 입력하세요.");
         email1.focus();
+=======
+        alert("주소를 입력해주세요.");
+        nm.focus();
+>>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
         return false;
     }
 
     if(email1.value == "") {
+<<<<<<< HEAD
         alert("이메일 주소를 입력하세요.");
         email1.focus();
         return false;
+=======
+        alert("이메일을 입력해주세요.")
+>>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     }
 
     document.join.submit();
