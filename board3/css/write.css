@@ -3,15 +3,6 @@ body {
     justify-content: center;
 }
 
-<<<<<<< HEAD
-a {
-    color: #800080;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #8a2be2;
-=======
 .back > a {
     font-family: 'Jua', sans-serif;
     color: blueviolet;
@@ -20,7 +11,6 @@ a:hover {
 
 .back > a:hover {
     color: purple;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     cursor: pointer;
 }
 
@@ -30,11 +20,7 @@ a:hover {
     font-family: 'Gugi', cursive;
     font-size: 25px; 
     text-align: center;
-<<<<<<< HEAD
-    color: #800080;
-=======
     color: blueviolet;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     margin: 15px 0px;
 }
 
@@ -62,18 +48,6 @@ textarea { resize: none; }
     float: right;
     padding: 5px;
     width: auto;
-<<<<<<< HEAD
-    border: none;
-    border-radius: 5px;
-    background-color: #800080;
-    color: white;
-    margin: none;
-    transform: translate(0, 10%);
-}
-
-.btn:hover {
-    background-color: #8a2be2;
-=======
     border: 2px solid blueviolet;
     border-radius: 7px;
     font-weight: bold;
@@ -86,7 +60,6 @@ textarea { resize: none; }
 
 .btn:hover {
     text-decoration: underline;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     cursor: pointer;
 }
 

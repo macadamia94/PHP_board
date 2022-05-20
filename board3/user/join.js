@@ -47,11 +47,7 @@ function email_change(){
     }
 }
 
-<<<<<<< HEAD
 function check() {
-=======
-function upw_check() {
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     var uid = document.getElementById("uid");
     var upw = document.getElementById("upw");
     var upw2 = document.getElementById("upw2");
@@ -62,11 +58,7 @@ function upw_check() {
 
     if(uid.value == "") {
         alert("아이디를 입력해주세요.");
-<<<<<<< HEAD
-        upw. focus();
-=======
         uid. focus();
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
         return false;
     }
 
@@ -105,24 +97,15 @@ function upw_check() {
     }
 
     if(addr.value == "") {
-<<<<<<< HEAD
-        alert("주소를 입력하세요.");
-        email1.focus();
-=======
         alert("주소를 입력해주세요.");
-        nm.focus();
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
+        addr.focus();
         return false;
     }
 
     if(email1.value == "") {
-<<<<<<< HEAD
         alert("이메일 주소를 입력하세요.");
         email1.focus();
         return false;
-=======
-        alert("이메일을 입력해주세요.")
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     }
 
     document.join.submit();

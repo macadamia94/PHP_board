@@ -11,33 +11,21 @@ header {
 }
 
 header > a {
-<<<<<<< HEAD
-    color: #800080;
-=======
     font-family: 'Jua', sans-serif;
     color: blueviolet;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     text-decoration: none;
 }
 
 fieldset {
     border-radius: 8px;
-<<<<<<< HEAD
-    border-color: #800080;
-=======
     border-color: blueviolet;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     margin-bottom: 10px;
 }
 
 fieldset legend { 
     font-family: 'Gugi', cursive;
-    text-align: center; 
-<<<<<<< HEAD
-    color: #800080;
-=======
+    text-align: center;
     color: blueviolet;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
 }
 
 form {  
@@ -59,11 +47,7 @@ form {
     width: 155px;
     border: none;
     border-radius: 8px;
-<<<<<<< HEAD
-    background-color: #800080;
-=======
     background-color: blueviolet;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     color: white;
     font-family: 'Jua', sans-serif;
     font-size: medium;
@@ -71,11 +55,7 @@ form {
 }
 
 .button:hover {
-<<<<<<< HEAD
-    background-color: #8a2be2;
-=======
     background-color: purple;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     color: whitesmoke;
     font-weight: 570;
     cursor: pointer;
@@ -84,14 +64,6 @@ form {
 small > a {
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
-    color: #800080;
-
-}
-
-small > a:hover {
-    color: #8a2be2;
-=======
     color: blueviolet;
     font-family: 'Jua', sans-serif;
     font-size: medium;
@@ -99,6 +71,5 @@ small > a:hover {
 
 small > a:hover {
     color: purple;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     cursor: pointer;
 }

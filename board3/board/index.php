@@ -43,11 +43,7 @@ $list= sel_board_list();
         <?php foreach($list as $item) { ?>
         <tr class="two_tr">
             <td><?= $item["i_board"] ?></td>
-<<<<<<< HEAD
-            <td class="detail"><a href="detail.php?i_board=<?=$item["i_board"]?>"><?= $item["title"] ?></a></td>
-=======
             <td class="index_title"><a href="detail.php?i_board=<?=$item["i_board"]?>"><?= $item["title"] ?></a></td>
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
             <td><?= $item["nm"] ?></td>
             <td><?= $item["created_at"] ?></td>
             <td><?= $item["hit"] ?></td>

@@ -8,42 +8,26 @@ body {
 }
 
 header a {
-<<<<<<< HEAD
-    color: #800080;
-=======
     color: blueviolet;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     text-decoration: none;
     font-family: 'Jua', sans-serif;
 }
 
 header a:hover {
-<<<<<<< HEAD
-    color: #8a2be2;
-=======
     color: purple;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     cursor: pointer;
 }
 
 fieldset {
     border-radius: 8px;
-<<<<<<< HEAD
-    border-color: #800080;
-=======
     border-color: blueviolet;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     margin-bottom: 10px;
 }
 
 fieldset legend { 
     font-family: 'Gugi', cursive;
     text-align: center; 
-<<<<<<< HEAD
-    color: #800080;
-=======
     color: blueviolet;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
 }
 
 form {  
@@ -74,11 +58,7 @@ form {
     width: 200px;
     border: none;
     border-radius: 8px;
-<<<<<<< HEAD
-    background-color: #800080;
-=======
     background-color: blueviolet;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     color: white;
     font-size: medium;
     font-family: 'Jua', sans-serif;
@@ -87,11 +67,7 @@ form {
 }
 
 .join_button:hover {
-<<<<<<< HEAD
-    background-color: #8a2be2;
-=======
     background-color: purple;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     cursor: pointer;
 }
 
@@ -102,46 +78,30 @@ form {
     width: auto;
     border: none;
     border-radius: 5px;
-<<<<<<< HEAD
-    background-color: #800080;
-=======
     background-color: blueviolet;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     color: white;
     margin: none;
     transform: translate(0, 10%);
 }
 
 #check_button:hover {
-<<<<<<< HEAD
-    background-color: #8a2be2;
-=======
     background-color: purple;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     cursor: pointer;
 }
 
 small { text-align: center; }
 
 small a {
-<<<<<<< HEAD
-    color: #800080;
-=======
     font-family: 'Jua', sans-serif;
     font-size: medium;
     color: blueviolet;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     line-height: 33px;
 }
 
 /* check.php */
 
 h3 {
-<<<<<<< HEAD
-    color: #800080;
-=======
     color: blueviolet;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     text-align: center;
     padding-bottom: 20px;
 }
@@ -160,11 +120,7 @@ h3 {
     width: auto;
     border: none;
     border-radius: 5px;
-<<<<<<< HEAD
-    background-color: #800080;
-=======
     background-color: blueviolet;
->>>>>>> 494b161b3e019842ade8bb26db55c8f7efa64f7d
     color: white;
     margin: none;
 }
