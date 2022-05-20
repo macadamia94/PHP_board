@@ -117,3 +117,8 @@ textarea { resize: none; }
     font-family: 'Jua', sans-serif; 
 }
 
+.hit {
+    display: flex;
+    justify-content: end;
+    font-family: 'Jua', sans-serif;
+}

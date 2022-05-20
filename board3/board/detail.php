@@ -25,28 +25,32 @@ $item= sel_board($param);
 <body>
     <div class="back"><a href="index.php">← MAIN</a></div>
     <div class="d_title"><h2>글조회 | <?=$item["nm"]?></h2></div>
+    <!-- 조회수 -->
+    <div class="hit">
+    <?php if(!isset($_SESSION["login_user"]) || $login_user["i_user"] !== $item["i_user"]) { ?>
+        <?php $hit= hit_board($param); ?>
+        <tr>조회수</tr>
+        <tr><?= $item["hit"] ?></tr>
+    <?php }?>
+    </div>
     <div class="d_box"><?=$item["title"]?></div>
     <hr color="#ddb9ff">
     <div class="d_box_c"><?=nl2br($item["ctnt"])?></div>
     <hr color="#ddb9ff">
+    <!-- 업로드 파일 확인 -->
     <div class="file">
         <?php if($item["files"] == '') { echo "파일없음"; 
-            } else { ?><a href="../files/upload/<?=$item["i_user"]?>/<?=$item["files"]?>" download><?=$item["files"]?>
+            } else { ?><a href="../files/upload/<?=$item["i_user"]?>/<?=$item["files"]?>" download><?=$item["files"]?></a>
         <?php }?> 
     </div>
+    <!-- 삭제, 수정 버튼 -->
     <div class="dm_btn">
     <?php if(isset($_SESSION["login_user"]) && $login_user["i_user"] === $item["i_user"]) { ?>
         <button class="btn" onclick="isDel();">삭제</button>
         <a href="../board/mod.php?i_board=<?=$i_board?>"><button class="btn">수정</button></a>
     <?php } ?>
     </div>
-    <div>
-    <?php if(isset($_SESSION["login_user"]) && $login_user["i_user"] !== $item["i_user"]) { ?>
-        <?php $hit= hit_board($param); ?>
-        <tr>조회수</tr>
-        <tr><?= $item["hit"] ?></tr>
-    <?php }?>
-    </div>
+    <!-- 삭제시 js -->
     <script>
         function isDel() {
             if(confirm('정말 삭제하시겟습니까?')) {

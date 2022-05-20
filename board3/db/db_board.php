@@ -56,7 +56,7 @@ function sel_board(&$param) {
     return mysqli_fetch_assoc($result);
 }
 
-// hit
+// detail.php (hit) 
 function hit_board(&$param) {
     $i_board= $param["i_board"];
 
