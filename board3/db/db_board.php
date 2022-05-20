@@ -94,11 +94,14 @@ function upd_board(&$param) {
     $i_user= $param["i_user"];
     $title= $param["title"];
     $ctnt= $param["ctnt"];
+    $target_filenm= $param["files"];
+    $files= $param["files"] == '' ? "NULL" : "'$target_filenm'";
 
     $sql= 
     "   UPDATE t_board
            SET title= '$title'
              , ctnt= '$ctnt'
+             , files= $files
              , updated_at= now()
          WHERE i_board= {$i_board}
            AND i_user= {$i_user}

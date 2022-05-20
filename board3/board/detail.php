@@ -11,7 +11,6 @@ $param= [
     "i_board" => $i_board
 ];
 $item= sel_board($param);
-$hit= hit_board($param);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,18 +31,21 @@ $hit= hit_board($param);
     <hr color="#ddb9ff">
     <div class="file">
         <?php if($item["files"] == '') { echo "파일없음"; 
-            } else { ?><a href="../files/upload/<?=$item["i_user"]?>/<?=$item["files"]?>" download><?=$item["files"]?><?php }?> 
-    </div>
-    <div>
-    <?php if($login_user["i_user"] !== $item["i_user"]) { ?>
-        <label>조회수 <input type="button" value="<?= $hit ?>"></label>
-    <?php }?>
+            } else { ?><a href="../files/upload/<?=$item["i_user"]?>/<?=$item["files"]?>" download><?=$item["files"]?>
+        <?php }?> 
     </div>
     <div class="dm_btn">
     <?php if(isset($_SESSION["login_user"]) && $login_user["i_user"] === $item["i_user"]) { ?>
         <button class="btn" onclick="isDel();">삭제</button>
         <a href="../board/mod.php?i_board=<?=$i_board?>"><button class="btn">수정</button></a>
     <?php } ?>
+    </div>
+    <div>
+    <?php if(isset($_SESSION["login_user"]) && $login_user["i_user"] !== $item["i_user"]) { ?>
+        <?php $hit= hit_board($param); ?>
+        <tr>조회수</tr>
+        <tr><?= $item["hit"] ?></tr>
+    <?php }?>
     </div>
     <script>
         function isDel() {
