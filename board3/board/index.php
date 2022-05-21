@@ -30,6 +30,8 @@ $list= sel_board_list();
     <?php } ?>        
     </div>
     <div class="top"><h1>게시판</h1></div>
+    <!-- 방문자 수 -->
+    <?php include_once "count_board.php"; ?>
     <table>
         <tr class="one_tr">
             <th width=100>Post ID</th>
