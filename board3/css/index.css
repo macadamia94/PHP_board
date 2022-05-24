@@ -48,6 +48,10 @@ body {
     font-weight: bolder;
 }
 
+.visited {
+    font-family: 'Jua', sans-serif;
+}
+
 .one_tr > th {
     font-family: 'Gugi', cursive;
     font-size: large;

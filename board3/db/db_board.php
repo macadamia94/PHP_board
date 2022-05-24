@@ -43,7 +43,7 @@ function sel_board(&$param) {
     $i_board= $param["i_board"];
 
     $sql= 
-    "   SELECT B.title, B.ctnt, B.created_at, B.files, B.hit, B.liked
+    "   SELECT B.i_board, B.title, B.ctnt, B.created_at, B.files, B.hit, B.liked
              , U.i_user, U.nm
           FROM t_board B
          INNER JOIN t_user U
