@@ -22,15 +22,31 @@ function ins_board(&$param) {
     return $result;
 }
 
-// index.php
-function sel_board_list() {
+// index.php (paging)
+function sel_paging_count(&$param) {
+    $sql = 
+    "   SELECT CEIL(COUNT(i_board) / {$param["list_size"]}) AS cnt
+          FROM t_board
+    ";
+    $conn = get_conn();
+    $result = mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    $row= mysqli_fetch_assoc($result); 
+    return $row["cnt"];
+}
+
+// index.php (list)
+function sel_board_list(&$param) {
     $sql=
     "   SELECT B.i_board, B.title, B.created_at, B.files, B.hit, B.liked
              , U.i_user, U.nm
           FROM t_board B
          INNER JOIN t_user U
             ON B.i_user = U.i_user
-         ORDER BY B.i_board DESC
+    ";
+    $sql .= 
+    "   ORDER BY B.i_board DESC
+        LIMIT {$param["offset"]}, {$param["list_size"]}
     ";
     $conn= get_conn();
     $result= mysqli_query($conn, $sql);

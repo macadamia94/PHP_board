@@ -8,7 +8,24 @@ if (isset($_SESSION["login_user"])) {
     $nm = $login_user["nm"];
 }
 
-$list = sel_board_list();
+$list_size = 7; // 한 페이지에 출력될 게시물의 수
+$more_page = 2; // 지정한 수만큼 페이지번호 링크를 양쪽으로 출력
+
+$page = 1;
+if (isset($_GET["page"])) {
+    $page = intval($_GET["page"]);
+}
+$param = [
+    "offset" => ($page - 1)  * $list_size,
+    "list_size" => $list_size,
+];
+$page_count = sel_paging_count($param);
+$start_page = max($page - $more_page, 1);
+$end_page = min($page + $more_page, $page_count);
+$prev_page = max($start_page - $more_page - 1, 1);
+$next_page = min($end_page + $more_page + 1, $page_count);
+
+$list = sel_board_list($param);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,6 +81,27 @@ $list = sel_board_list();
             </tr>
         <?php } ?>
     </table>
+    <div class="paging_area">
+        <?php if ($page != 1 || $start_page > 1) { ?>
+            <a class='move_btn' href="index.php?page=<?= $prev_page ?>"> « </a>
+            <a class='move_btn' href="index.php?page=<?= $page - 1 ?>"> 이전 </a>
+            <a class='pagenum' href="index.php?page=1">1</a> ...
+        <?php } else { ?>
+            <span class='move_btn disabled'> « </span>
+            <span class='move_btn disabled'> 이전 </span>
+        <?php } ?>
+        <?php for ($i = $start_page; $i <= $end_page; $i++) { ?>
+            <a class="pagenum <?= ($i == $page) ? "current" : "" ?>" href="index.php?page=<?= $i ?>"><?= $i ?></a>
+        <?php } ?>
+        <?php if ($page != $end_page || $end_page < $page_count) { ?>
+            ... <a class='pagenum' href="index.php?page=<?= $page_count ?>"><?= $page_count ?></a>
+            <a class='move_btn' href="index.php?page=<?= $page + 1 ?>"> 다음 </a>
+            <a class='move_btn' href="index.php?page=<?= $next_page ?>"> » </a>
+        <?php } else { ?>
+            <span class='move_btn disabled'> 다음 </span>
+            <span class='move_btn disabled'> » </span>
+        <?php } ?>
+    </div>
     <center>
         <form action="search.php" method="get">
             <select name="search_opt" id="search_opt" onchange="info()">
