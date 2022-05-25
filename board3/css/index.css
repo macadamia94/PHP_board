@@ -1,4 +1,8 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     margin: 30px;
@@ -25,15 +29,18 @@ body {
     cursor: pointer;
 }
 
-.login > span { font-family: 'Jua', sans-serif; }
-.login > a {
+.login>span {
+    font-family: 'Jua', sans-serif;
+}
+
+.login>a {
     float: right;
     text-decoration: none;
     font-family: 'Jua', sans-serif;
     color: blueviolet;
 }
 
-.login > a:hover {
+.login>a:hover {
     color: purple;
     cursor: pointer;
 }
@@ -75,12 +82,12 @@ body {
     cursor: pointer;
 }
 
-.one_tr > th {
+.one_tr>th {
     font-family: 'Gugi', cursive;
     font-size: large;
 }
 
-.two_tr > td {
+.two_tr>td {
     font-family: 'Jua', sans-serif;
 }
 
@@ -93,17 +100,18 @@ table {
     padding: 10px 0px;
 }
 
-th, td {
+th,
+td {
     padding: 10px 0px;
     border-bottom: 1px solid rgb(226, 185, 226);
 }
 
-.index_title > a {
+.index_title>a {
     text-decoration: none;
     color: black;
 }
 
-.index_title > a:hover {
+.index_title>a:hover {
     color: blueviolet;
     text-decoration: underline;
     cursor: pointer;

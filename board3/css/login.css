@@ -1,4 +1,8 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .container {
     display: grid;
@@ -10,7 +14,7 @@ header {
     margin-top: 30px;
 }
 
-header > a {
+header>a {
     font-family: 'Jua', sans-serif;
     color: blueviolet;
     text-decoration: none;
@@ -22,13 +26,13 @@ fieldset {
     margin-bottom: 10px;
 }
 
-fieldset legend { 
+fieldset legend {
     font-family: 'Gugi', cursive;
     text-align: center;
     color: blueviolet;
 }
 
-form {  
+form {
     margin: 30px 50px;
 }
 
@@ -61,7 +65,7 @@ form {
     cursor: pointer;
 }
 
-small > a {
+small>a {
     display: flex;
     justify-content: center;
     color: blueviolet;
@@ -69,7 +73,7 @@ small > a {
     font-size: medium;
 }
 
-small > a:hover {
+small>a:hover {
     color: purple;
     cursor: pointer;
 }

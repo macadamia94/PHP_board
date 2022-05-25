@@ -3,34 +3,34 @@ include_once "../db/db_board.php";
 include_once "../board/upload.php";
 
 session_start();
-$login_user=&$_SESSION["login_user"];
-$i_user= $login_user["i_user"];
+$login_user = &$_SESSION["login_user"];
+$i_user = $login_user["i_user"];
 
-$i_board= $_POST["i_board"];
-$title= $_POST["title"];
-$ctnt= $_POST["ctnt"];
+$i_board = $_POST["i_board"];
+$title = $_POST["title"];
+$ctnt = $_POST["ctnt"];
 
-if($imageUpload) {
-    $param= [
+if ($imageUpload) {
+    $param = [
         "files" => $target_filenm
     ];
 } else {
-    $param= [
+    $param = [
         "files" => null
     ];
 }
 
-$param+= [
+$param += [
     "i_board" => $i_board,
     "i_user" => $i_user,
     "title" => $title,
     "ctnt" => $ctnt
 ];
-$item= upd_board($param);
+$item = upd_board($param);
 
-if($item) { ?>
+if ($item) { ?>
     <script>
         alert("수정이 완료되었습니다.");
-        location.href= "detail.php?i_board=<?=$i_board?>";
+        location.href = "detail.php?i_board=<?= $i_board ?>";
     </script>
 <?php } ?>

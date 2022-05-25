@@ -1,8 +1,12 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     margin: 30px;
-    display: grid; 
+    display: grid;
     justify-content: center;
     align-items: center;
 }
@@ -24,13 +28,13 @@ fieldset {
     margin-bottom: 10px;
 }
 
-fieldset legend { 
+fieldset legend {
     font-family: 'Gugi', cursive;
-    text-align: center; 
+    text-align: center;
     color: blueviolet;
 }
 
-form {  
+form {
     margin: 50px;
 }
 
@@ -41,17 +45,19 @@ form {
     font-family: 'Jua', sans-serif;
 }
 
-.data { 
+.data {
     font-family: 'Jua', sans-serif;
     padding: 5px;
     margin-bottom: 6px;
     border-color: whitesmoke;
     border-radius: 7px;
     border-width: 3px;
-    vertical-align: bottom; 
+    vertical-align: bottom;
 }
 
-.data > #decide { font-family: 'Jua', sans-serif; }
+.data>#decide {
+    font-family: 'Jua', sans-serif;
+}
 
 .join_button {
     padding: 10px;
@@ -89,7 +95,9 @@ form {
     cursor: pointer;
 }
 
-small { text-align: center; }
+small {
+    text-align: center;
+}
 
 small a {
     font-family: 'Jua', sans-serif;

@@ -30,7 +30,7 @@ $item = sel_board($param);
 <body>
     <!-- 뒤로가기 -->
     <!-- index 와 같은 이유 index.php 71~73행 참고 -->
-    <div class="back"><a href="index.php?<?=$search_select === "" ? "" : "&search_select= {$search_select}" ?><?=$search_txt === "" ? "" : "&search_txt= {$search_txt}" ?>">← MAIN</a></div>
+    <div class="back"><a href="index.php?<?= $search_select === "" ? "" : "&search_select= {$search_select}" ?><?= $search_txt === "" ? "" : "&search_txt= {$search_txt}" ?>">← MAIN</a></div>
     <div class="d_title">
         <h2>글조회 | <?= $item["nm"] ?></h2>
     </div>
