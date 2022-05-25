@@ -35,10 +35,13 @@ $list = sel_board_list();
     <div class="top">
         <h1>게시판</h1>
     </div>
-    <div class="visited">
-        <!-- 방문자 수 -->
+    <!-- 방문자 수 -->
+    <span class="visited">
         <?php include_once "count_board.php"; ?>
-    </div>
+    </span>
+    <span class="write_btn">
+        <button class="no" onclick="location.href='write.php'">글쓰기</button>
+    </span>
     <table>
         <tr class="one_tr">
             <th width=100>Post ID</th>
@@ -52,7 +55,7 @@ $list = sel_board_list();
         <?php foreach ($list as $item) { ?>
             <tr class="two_tr">
                 <td><?= $item["i_board"] ?></td>
-                <td class="index_title"><a href="detail.php?i_board=<?=$item["i_board"]?>"><?= $item["title"] ?></a></td>
+                <td class="index_title"><a href="detail.php?i_board=<?= $item["i_board"] ?>"><?= $item["title"] ?></a></td>
                 <td><?= $item["nm"] ?></td>
                 <td><?= $item["created_at"] ?></td>
                 <td><?= $item["hit"] ?></td>
@@ -62,10 +65,22 @@ $list = sel_board_list();
         <?php } ?>
     </table>
     <center>
-        <div>
-            <button class="no" onclick="location.href='write.php'">글쓰기</button>
-        </div>
+        <form action="search.php" method="get">
+            <select name="search_opt" id="search_opt" onchange="info()">
+                <option value="title">제목</option>
+                <option value="ctnt">내용</option>
+                <option value="name">작성자</option>
+            </select>
+            <input class="textform" type="text" name="search" id="search_box" autocomplete="off" placeholder="제목을 입력하세요." required>
+            <input class="submit" type="submit" value="검색">
+            <p>
+                <input type="date" name="date1">
+                ~
+                <input type="date" name="date2">
+            </p>
+        </form>
     </center>
+    <script src="index.js"></script>
 </body>
 
 </html>

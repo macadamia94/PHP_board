@@ -42,7 +42,7 @@
 ?>
 
 <div><?=$date?></div>
-<div>
+<span>
     Total : <?=$totalCount?> / 
     Today : <?=$count?>
-</div>
+</span>
