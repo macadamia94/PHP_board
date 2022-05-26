@@ -38,9 +38,9 @@ $item = sel_board($param);
             <tr><?= $item["hit"] ?></tr>
         <?php } ?>
     </div>
-    <div class="d_box"><?= str_replace($search_txt, "<mark>{$search_txt}</mark>", $item["title"]) ?></div>
+    <div class="d_box"><?=$item["title"]?></div>
     <hr color="#ddb9ff">
-    <div class="d_box_c"><?= str_replace($search_txt, "<mark>{$search_txt}</mark>", nl2br($item["ctnt"])) ?></div>
+    <div class="d_box_c"><?=nl2br($item["ctnt"])?></div>
     <hr color="#ddb9ff">
     <!-- 업로드 파일 확인 -->
     <div class="file">
