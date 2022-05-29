@@ -85,7 +85,8 @@ textarea {
     font-size: medium;
     font-weight: bold;
     width: 550px;
-    height: 229px;
+    padding: 10px 0 10px 25px;
+    /* height: 229px; */
 }
 
 .d_box:focus,

@@ -7,6 +7,7 @@ if (isset($_SESSION["login_user"])) {
 }
 
 $i_board = $_GET["i_board"];
+$page = $_GET["page"];
 $param = [
     "i_board" => $i_board
 ];
@@ -26,7 +27,7 @@ $item = sel_board($param);
 
 <body>
     <!-- 뒤로가기 -->
-    <div class="back"><a href="index.php">← MAIN</a></div>
+    <div class="back"><a href="index.php?page=<?= $page ?>">← MAIN</a></div>
     <div class="d_title">
         <h2>글조회 | <?= $item["nm"] ?></h2>
     </div>
