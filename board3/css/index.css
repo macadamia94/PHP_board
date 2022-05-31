@@ -55,6 +55,11 @@ body {
     font-weight: bolder;
 }
 
+.head, .from_to {
+    font-family: 'Jua', sans-serif;
+    font-size: large;
+}
+
 .visited {
     display: inline;
     font-family: 'Jua', sans-serif;
